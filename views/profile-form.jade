@@ -1,0 +1,97 @@
+
+
+doctype strict
+
+html
+
+  html
+
+    title Edit Profile
+
+    link( 
+        rel = "stylesheet"
+      , type = "text/css"
+      , href = "/css/styles.css" )
+
+  body 
+
+    div( class = "container width700" )
+
+      div( class = "panel panel-primary" )
+
+        div( class = "panel-heading" )
+
+          h1( class = "panel-title" ) Edit Profile
+
+        div( class = "panel-body" )
+
+          - // edit profile form
+
+          form(
+              action = "/settings/profile"
+            , method = "post"
+            , enctype = "multipart/form-data" )
+
+
+            - // photo field
+
+            div( class = "form-group" )
+
+              div( class = "photoField" )
+
+                label( for = "photoField" ) Photo
+
+                input( type = "file", class = "form-control input-lg", name = "photoField" )
+
+
+            - // name fields
+
+            div( class = "form-group" )
+
+              div( class = "nameField pull-left" )
+
+                label( for = "firstNameField" ) First Name
+
+                input( type = "text", class = "form-control input-lg", placeholder = "First Name", name = "firstNameField" )
+
+              div( class = "nameField pull-right" )
+
+                label( for = "lastNameField" ) Last Name
+
+                input( type = "text", class = "form-control input-lg", placeholder = "Last Name", name = "lastNameField" )
+
+              div( class = "clearfix" )
+
+            - // bio
+
+            div( class = "form-group" )
+
+              label( for = "bioField" ) Bio
+
+              textarea( class = "form-control input-lg", rows = "3", placeholder = "What's your story?", name = "bioField" )
+
+
+            div( class = "form-group" )
+
+              input( type = "submit", class = "btn btn-primary", value = "submit" )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
